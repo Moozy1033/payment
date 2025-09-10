@@ -20,9 +20,9 @@
                 <div class="mx-auto">
                     <img src="image/logo.jpg" alt="Logo" class="h-24 w-48" />
                 </div>
-                <div class="rounded hidden md:block shadow-md px-6 py-5">
+                <div class="rounded hidden md:block shadow-md px-6 py-4">
                     <p class="text-sm font-medium text-gray-700">3909 California Avenue SW,<br> Seattle, WA, 98116</p>
-                    <a href="#" class="text-orange-600 text-sm hover:underline">📞 Contact support</a>
+                    <a href="#" class="text-orange-800 font-medium text-sm underline pt-2 flex gap-2"> <img src="image/call.svg" width="20" alt=""> Contact support</a>
                 </div>
             </div>
 
@@ -45,17 +45,22 @@
                 <div class="bg-gray-50 border rounded-lg p-4 space-y-2">
                     <div class="flex justify-between text-sm text-gray-600">
                         <span>1 selected, 1 total</span>
-                        <a href="#" class="text-orange-600 hover:underline">Clear all</a>
+                        <a href="#" class="text-orange-800 font-medium underline">Clear all</a>
                     </div>
                     <div class="flex justify-between items-center border p-3 rounded bg-white">
                         <div class="flex items-center space-x-2">
-                            <input type="checkbox" checked class=" h-5 w-5 accent-orange-600 outline outline-0 outline-orange-600" />
+                            <input type="checkbox" checked
+                                class=" h-5 w-5 accent-orange-600 outline outline-0 outline-orange-600" />
                             <div>
                                 <p class="font-medium text-sm">Invoice 3218</p>
                                 <p class="text-[12px]  text-gray-500">due Oct 03, 2025</p>
                             </div>
                         </div>
-                        <p class="font-semibold">$924.00</p>
+                        <div>
+                            <p class="text-[12px]  text-gray-500">Amount due</p>
+                            <p class="font-semibold text-end">$924.00</p>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -65,11 +70,11 @@
                 <h2 class="text-xl font-bold mb-4 pt-2">Enter payment details</h2>
 
                 <!-- Tabs -->
-                <div class="flex mb-4 space-x-2">
+                <div class="flex mb-4 space-x-2 text-sm md:text-[15px]">
                     <button
-                        class="flex-1 bg-orange-100 border border-orange-500 text-orange-600 font-semibold py-2 rounded">Card</button>
-                    <button class="flex-1 bg-gray-100 text-gray-600 py-2 rounded">US bank account</button>
-                    <button class="flex-1 bg-gray-100 text-gray-600 py-2 rounded">Google Pay</button>
+                        class="flex-1 bg-orange-100 border border-orange-500 px-2 text-orange-600 font-semibold py-2.5 rounded">Card</button>
+                    <button class="flex-1 bg-gray-100 text-gray-600 py-3 px-2 rounded">US bank account</button>
+                    <button class="flex-1 bg-gray-100 text-gray-600 py-3 px-2 rounded">Apple Pay</button>
                 </div>
 
                 <!-- Payment Form -->
@@ -78,30 +83,34 @@
                     <!-- Card Number -->
                     <div>
                         <!-- <label class="block text-sm font-medium text-gray-700"></label> -->
-                        <input type="text" placeholder="Card number" class="w-full mt-1 p-2 border rounded focus:outline-purple-600" />
+                        <input type="text" placeholder="Card number"
+                            class="w-full mt-1 p-2 border rounded focus:outline-purple-600" />
                     </div>
 
                     <!-- Expiry + CVV -->
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <!-- <label class="block text-sm font-medium text-gray-700"></label> -->
-                            <input type="text" placeholder="Expiration date (MM/YY)" class="w-full mt-1 p-2 border rounded focus:outline-purple-600" />
+                            <input type="text" placeholder="Expiration date (MM/YY)"
+                                class="w-full mt-1 p-2 border rounded focus:outline-purple-600" />
                         </div>
                         <div>
                             <!-- <label class="block text-sm font-medium text-gray-700"></label> -->
-                            <input type="text" placeholder="Security code" class="w-full focus:outline-purple-600 mt-1 p-2 border rounded" />
+                            <input type="text" placeholder="Security code"
+                                class="w-full focus:outline-purple-600 mt-1 p-2 border rounded" />
                         </div>
                     </div>
 
                     <!-- Name Fields -->
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid md:grid-cols-2 gap-4">
                         <div>
-                            <!-- <label class="block text-sm font-medium text-gray-700"></label> -->
-                            <input type="text" placeholder="First Name" class="w-full mt-1 p-2 border rounded focus:outline-[#D67622]" />
+                            <input type="text" placeholder="First Name"
+                                class="w-full mt-1 p-2 border rounded focus:outline-[#D67622]" />
                         </div>
                         <div>
                             <!-- <label class="block text-sm font-medium text-gray-700"></label> -->
-                            <input type="text" placeholder="Last Name" class="w-full mt-1 p-2 border rounded focus:outline-[#D67622]" />
+                            <input type="text" placeholder="Last Name"
+                                class="w-full mt-1 p-2 border rounded focus:outline-[#D67622]" />
                         </div>
                     </div>
 
@@ -109,7 +118,8 @@
                     <div>
                         <label class="block text-sm font-medium text-gray-700"></label>
                         <div class="relative">
-                            <input type="email" placeholder="Email Address" class="w-full mt-1 p-2  border rounded focus:outline-[#D67622]" />
+                            <input type="email" placeholder="Email Address"
+                                class="w-full mt-1 p-2  border rounded focus:outline-[#D67622]" />
                             <div class="absolute right-3 top-3 text-gray-500"><img src="image/mail.svg" alt=""></div>
                         </div>
                     </div>
@@ -157,20 +167,21 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-200 text-sm py-4 px-6 mt-8">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-            <div class="space-x-4">
+    <footer class="bg-gray-900 text-gray-200 py-4 px-6 mt-8">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between md:items-center space-y-2 md:space-y-0">
+            <div class="space-x-4 text-[12px] md:text-sm">
                 <a href="#" class="hover:underline">About</a>
                 <a href="#" class="hover:underline">Terms</a>
                 <a href="#" class="hover:underline">Privacy Policy</a>
                 <a href="#" class="hover:underline">Frequently Asked Questions</a>
             </div>
-            <div class="flex items-center space-x-1">
-                <span>💳</span>
-                <span>LEAP Online Payments</span>
-                <span class="text-gray-400">powered by</span>
-                <span class="font-semibold">FeeWise</span>
+            <div class="flex items-center justify-end space-x-1 text-[12px] md:text-sm pt-2 md:pt-0">
+                <span><img src="image/leap.png" class="h-3.5" alt=""></span>
             </div>
+        </div>
+        <div class="text-end max-w-6xl">
+            <span class="text-gray-400 text-[11px]">powered by</span>
+            <span class="font-semibold">FeeWise</span>
         </div>
     </footer>
 
