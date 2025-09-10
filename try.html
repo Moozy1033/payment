@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Payment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="">
+
+    <!-- Main Container -->
+    <div class="max-w-6xl mx-auto bg-white rounded-lg p-6 mt-6 mb-20">
+
+        <!-- Top Grid: Header Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 md:space-x-10 mb-6 ">
+            <!-- Left: Logo and Address -->
+            <div class="flex items-start space-x-4 rounded-md justify-between md:w-5/6 pt-3">
+                <div class="mx-auto">
+                    <img src="image/logo.jpg" alt="Logo" class="h-24 w-48" />
+                </div>
+                <div class="rounded hidden md:block shadow-md px-6 py-5">
+                    <p class="text-sm font-medium text-gray-700">3909 California Avenue SW,<br> Seattle, WA, 98116</p>
+                    <a href="#" class="text-orange-600 text-sm hover:underline">📞 Contact support</a>
+                </div>
+            </div>
+
+            <!-- Right: Amount Paying -->
+            <div class=" py-7 rounded-xl text-center shadow-md">
+                <p class="text-base text-gray-500">Amount paying</p>
+                <p class="text-2xl font-bold text-black">$924.00</p>
+                <p class="text-sm text-gray-700 mt-1">to <b>de Vrieze | Carney PLLC</b></p>
+            </div>
+        </div>
+
+        <!-- Middle Grid: Invoice + Form -->
+        <div class="grid grid-cols-1 md:grid-cols-2 md:space-x-10">
+            <!-- Left: Invoice/Matter Statement -->
+            <div class="md:w-5/6 pt-2">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-xl font-bold mb-4">Matter statement</h2>
+                    <p class="text-sm mb-4">gonzra-005</p>
+                </div>
+                <div class="bg-gray-50 border rounded-lg p-4 space-y-2">
+                    <div class="flex justify-between text-sm text-gray-600">
+                        <span>1 selected, 1 total</span>
+                        <a href="#" class="text-orange-600 hover:underline">Clear all</a>
+                    </div>
+                    <div class="flex justify-between items-center border p-3 rounded bg-white">
+                        <div class="flex items-center space-x-2">
+                            <input type="checkbox" checked class=" h-5 w-5 accent-orange-600 outline outline-0 outline-orange-600" />
+                            <div>
+                                <p class="font-medium text-sm">Invoice 3218</p>
+                                <p class="text-[12px]  text-gray-500">due Oct 03, 2025</p>
+                            </div>
+                        </div>
+                        <p class="font-semibold">$924.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Payment Form -->
+            <div>
+                <h2 class="text-xl font-bold mb-4 pt-2">Enter payment details</h2>
+
+                <!-- Tabs -->
+                <div class="flex mb-4 space-x-2">
+                    <button
+                        class="flex-1 bg-orange-100 border border-orange-500 text-orange-600 font-semibold py-2 rounded">Card</button>
+                    <button class="flex-1 bg-gray-100 text-gray-600 py-2 rounded">US bank account</button>
+                    <button class="flex-1 bg-gray-100 text-gray-600 py-2 rounded">Google Pay</button>
+                </div>
+
+                <!-- Payment Form -->
+                <form id="payment-form" class="space-y-4">
+
+                    <!-- Card Number -->
+                    <div>
+                        <!-- <label class="block text-sm font-medium text-gray-700"></label> -->
+                        <input type="text" placeholder="Card number" class="w-full mt-1 p-2 border rounded focus:outline-purple-600" />
+                    </div>
+
+                    <!-- Expiry + CVV -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <!-- <label class="block text-sm font-medium text-gray-700"></label> -->
+                            <input type="text" placeholder="Expiration date (MM/YY)" class="w-full mt-1 p-2 border rounded focus:outline-purple-600" />
+                        </div>
+                        <div>
+                            <!-- <label class="block text-sm font-medium text-gray-700"></label> -->
+                            <input type="text" placeholder="Security code" class="w-full focus:outline-purple-600 mt-1 p-2 border rounded" />
+                        </div>
+                    </div>
+
+                    <!-- Name Fields -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <!-- <label class="block text-sm font-medium text-gray-700"></label> -->
+                            <input type="text" placeholder="First Name" class="w-full mt-1 p-2 border rounded focus:outline-[#D67622]" />
+                        </div>
+                        <div>
+                            <!-- <label class="block text-sm font-medium text-gray-700"></label> -->
+                            <input type="text" placeholder="Last Name" class="w-full mt-1 p-2 border rounded focus:outline-[#D67622]" />
+                        </div>
+                    </div>
+
+                    <!-- Email with icon -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700"></label>
+                        <div class="relative">
+                            <input type="email" placeholder="Email Address" class="w-full mt-1 p-2  border rounded focus:outline-[#D67622]" />
+                            <div class="absolute right-3 top-3 text-gray-500"><img src="image/mail.svg" alt=""></div>
+                        </div>
+                    </div>
+
+                    <!-- Billing Address -->
+                    <div>
+                        <!-- <label class="block text-sm font-medium text-gray-700">Billing Address</label> -->
+                        <div class="relative">
+                            <input type="text" placeholder="Billing Address"
+                                class="w-full mt-1 p-2 border rounded focus:outline-[#D67622]" />
+                            <!-- <div class="absolute right-3 top-3 text-gray-500"></div> -->
+                        </div>
+                    </div>
+
+                    <!-- Manual Address Checkbox -->
+                    <div class="text-sm text-end text-gray-700">
+                        <span>Can't find your address?</span>
+                        <label class="text-orange-600 font-medium ml-1 cursor-pointer">
+                            Fill in manually <input type="checkbox" class="ml-1 align-middle" />
+                        </label>
+                    </div>
+
+                    <!-- Error Message -->
+                    <!-- <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+                        <div class="flex items-start space-x-2">
+                            <span class="text-xl">❌</span>
+                            <div>
+                                <p class="font-bold">Card Declined - The card was declined by the card issuer</p>
+                                <p class="text-sm">
+                                    Contact your card issuer for more details. Please verify the provided information or
+                                    use a different card.
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Disabled Pay Button -->
+                    <button type="button"
+                        class="w-full bg-gray-200 text-gray-500 font-semibold py-3 rounded cursor-not-allowed" disabled>
+                        Pay via card
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-200 text-sm py-4 px-6 mt-8">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+            <div class="space-x-4">
+                <a href="#" class="hover:underline">About</a>
+                <a href="#" class="hover:underline">Terms</a>
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Frequently Asked Questions</a>
+            </div>
+            <div class="flex items-center space-x-1">
+                <span>💳</span>
+                <span>LEAP Online Payments</span>
+                <span class="text-gray-400">powered by</span>
+                <span class="font-semibold">FeeWise</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
